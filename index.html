@@ -20,39 +20,49 @@
     </head>
     <body>
 
-        <header><!-- start header -->
-            <div class="wrapper">
-                <div class="logo">
-                    <span>Logo</span>
-                    <a href=""></a>
+       <header><!-- start header -->
+            <div class="header__info">
+                <div class="wrapper">
+                     <a class="logo">
+                        <img src="images/logo.png" alt="">
+                        <em>Услуги сантехника в Москве <br >и Московской области.</em>
+                    </a>
+                    <div class="contactUs contactUs__tel">
+                        <span>Работаем круглосуточно</span>
+                        <a class="tel" href="tel:+7 (499) 110-54-52">+7 (499) 110-54-52</a>
+                    </div>
+                    <div class="contactUs">
+                        <span>Звонок по России бесплатный</span>
+                        <a class="mail" href="mailto:8 (800) 777-59-71">8 (800) 777-59-71</a>
+                    </div>
+                    <button href="#modal-connect" class="button button--small magnific">
+                        Заказать звонок
+                    </button>
                 </div>
-                <nav><!-- start nav -->
-                    <ul>
-                        <li><a href="index.html" class="active">
-                            Главная
-                        </a></li>
-                        <li><a href="portfolio.html">
-                            Портфолио
-                        </a></li>
-                        <li><a href="apps.html">
-                            Разработка
-                        </a></li>
-                        <li><a href="promotion.html">
-                            Продвижение
-                        </a></li>
-                        <li><a href="about.html">
-                            О компании
-                        </a></li>
-                        <li><a href="#">
-                            Контакты
-                        </a></li>
-                    </ul>
-                </nav><!-- end nav -->
-                <button class="button">
-                    Заказать приложение
-                </button>
-            </div><!-- end wrapper -->
+            </div><!-- end header__info -->
+            <nav><!-- start nav -->
+                <ul class="wrapper">
+                    <li><a href="#offer" class="active">
+                        установа сантехники
+                    </a></li>
+                    <li><a href="#explain">
+                        разводка труб  
+                    <li><a href="#services">
+                        устранение засоров  
+                    </a></li>
+                    <li><a href="#advantages">
+                        НАШИ ПРЕИМУЩЕСТВА   
+                    </a></li>
+                    <li><a href="#reviews">
+                        ОТЗЫВЫ    
+                    </a></li>
+                    <li><a href="#contacts">
+                        КОНТАКТЫ
+                    </a></li>
+                </ul>
+            </nav><!-- end nav -->
         </header><!-- end header -->
+
         <button class="menu-button">
             <span class="menu-line top_line"></span>
             <span class="menu-line middle_line"></span>
@@ -62,15 +72,32 @@
 
         <section class="offer"><!-- start offer section -->
 
-            <div class="offerInfo wrapper"><!-- start offerInfo -->
+            <div class="wrapper"><!-- start offerInfo -->
 
-                <h1>
-                    We offer you to meet people whose ideas and views would be interesting for you! <br> Listen, discuss, learn.
-                </h1>
+                <ul>
+                    <li>Срочный выезд в течение 1 часа</li>
+                    <li>Вызов мастера бесплатно!</li>
+                    <li>Круглосуточный сервис и доступные цены</li>
+                </ul>
 
-                <button class="button">
-                    <span>Заказать</span>
-                </button>
+                <form action="#">
+                    <p>
+                        Оформите заказ через сайт
+                        <small>
+                            и получите скидку 10% на любые услуги!
+                        </small>
+                    </p>
+                        <span class="input name">
+                            <input type="text" name="name">
+                        </span>
+                        <span class="input tel">
+                            <input type="tel" name="tel">
+                        </span>
+                        <button class="button">
+                            ВЫЗВАТЬ МАСТЕРА
+                        </button>
+                    </span>
+                </form>
 
             </div><!-- end offerInfo -->
 
@@ -78,44 +105,139 @@
 
 
 
-         <section id=""><!-- start  section -->   
+         <section id="" class="numbers"><!-- start  section -->   
             <div class="wrapper"><!-- wrapper--> 
                 
-                <h2>Інфоблок <em>class="infoBlocks --four"</em> (--four - 25%, --three - 33%, --two - 50%)</h2>
+                <h2 class="white">«ДОМАШНИЙ САНТЕХНИК» В ЦИФРАХ</h2>
 
-                <div class="infoBlocks --four"><!-- infoBlocksWrap--> 
+                <div class="infoBlocks five"><!-- infoBlocksWrap--> 
 
                     <div class="infoBlock">
-                        <div class="infoBlock_icon">
-                            <img src="images/lawgroup.jpg" alt="">
-                        </div>  
-                        <p>Частнопрактикующих юристов и адвокатов</p>
+                        <span>7 лет</span>
+                        <p>Работаем с 2009 года</p>
                     </div>
 
                     <div class="infoBlock">
-                        <div class="infoBlock_icon">
-                            <img src="images/lawgroup.jpg" alt="">
-                        </div>
-                        <p>Руководителей юридических фирм и департаментов</p>
+                        <span>>100</span>
+                        <p>Сотрудников в штате</p>
                     </div> 
 
                     <div class="infoBlock">
-                        <div class="infoBlock_icon">
-                            <img src="images/lawgroup.jpg" alt="">
-                        </div>
-                        <p>Риэлторов и бухгалтеров</p>
+                        <span>7 лет</span>
+                        <p>Средний опыт работы наших мастеров</p>
                     </div> 
 
                     <div class="infoBlock">
-                        <div class="infoBlock_icon">
-                            <img src="images/lawgroup.jpg" alt="">
-                        </div>
-                        <p>Сотрудников и маркетологов юридических фирм</p>
+                        <span>>1000</span>
+                        <p>Положительных отзывов каждый месяц</p>
+                    </div>  
+
+                    <div class="infoBlock">
+                        <span>1 час</span>
+                        <p>Время выезда на заявку</p>
                     </div>  
 
                 </div><!-- end infoBlocks -->   
             </div><!-- end wrapper -->   
         </section><!-- end  section --> 
+
+
+        <section class="setUp">
+            <div class="wrapper">
+                <h2>Установка сантехники</h2> 
+                <p class="subtitle">
+                    Засоры всегда образуются в неподходящий момент. Они мешают нормально пользоваться канализацией и водопроводом, нарушают работу бытовой техники. Бороться с ними самостоятельно не всегда эффективно, а чаще всего небезопасно
+для труб и сантехнического оборудования.
+Безопасное и надёжное устранение засора в любое время дня и ночи – вот, что предлагает вам «Домашний сантехник».
+                </p>
+                <div class="products">
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="prodBlock">
+                        <div class="prodBlock__img">
+                            <img src="" alt="">
+                        </div>  
+                        <h3>Унитаз</h3>
+                        <ul>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                            <li>Установка унитаза/биде <strong>1490р.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
