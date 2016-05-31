@@ -758,9 +758,7 @@ hr {
             padding: 8px 0 2px;
             padding-right: 95px;
             position: relative;
-            @include m750 {
-                 &:last-of-type {border: none;}
-            }
+            &:last-of-type {border: none;}
             @include m500 {
                 font: 15px/22px $ms;
             }
