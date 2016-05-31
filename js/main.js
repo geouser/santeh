@@ -58,10 +58,52 @@ $('.menu-button').on('click', function(event) {
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  $('.trust__slider').slick({
+    dots: false,
+    arrows: true,
+    lazyLoad: 'ondemand',
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
 
 
-});
 
 
-
-
+});// end of file

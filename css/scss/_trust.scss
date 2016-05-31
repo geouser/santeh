@@ -1,0 +1,57 @@
+.trust {
+	padding: 170px 0 70px;
+
+	&__slider {
+		padding: 0 50px;
+
+		.slick-list {
+			border-left: 1px solid #E8E8E8;
+			border-right: 1px solid #E8E8E8;
+		}
+
+		.slide {
+			height: 100px;
+			@extend %vertAlign;
+			text-align: center;
+			border-right: 1px solid #E8E8E8;
+
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				max-width: 95%;
+				max-height: 95%;
+			}
+		}
+	}
+}
+
+.slick-next,
+.slick-prev {
+	width: 12px;
+	height: 23px;
+	margin-top: -12.5px;
+	@include transition(all, 0.3);
+
+	&:hover,
+	&:focus {
+		opacity: 0.75;
+	}
+
+	&:before {
+		display: none;
+	}
+}
+.slick-next {
+	right: 0;
+	background-image: url(../images/next.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+}
+.slick-prev {
+	left: 0;
+	background-image: url(../images/prev.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100%;
+}
