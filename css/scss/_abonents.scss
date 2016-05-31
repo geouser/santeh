@@ -9,12 +9,18 @@
 	.wrapper {
 		padding-left: 380px;
 		position: relative;
+		@include m800 {
+            padding: 0 10px;
+        }
 	}
 
 	.santechnik {
 		position: absolute;
 		bottom: 0;
 		left: -44px;
+		@include m800 {
+             display: none;
+        }
 	}
 
 	h2 {
@@ -36,6 +42,16 @@
 		background-color: rgba(255, 255, 255, .9);
 		padding: 30px 0 25px 170px;
 		text-align: center;
+		@include m800 {
+            width: 500px;
+            margin-left: 0;
+            padding: 20px 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        @include m500 {
+        	width: 100%;
+        }
 
 		h3 {
 			font-size: 18px;
@@ -85,6 +101,18 @@
 		padding: 20px 0 30px;
   		box-shadow: 0px 0px 48px 0px rgba( 8, 70, 82, .31);
   		bottom: -100px;
+  		@include m1000 {
+  			width: calc(100% + 280px);
+  			margin-left: -320px;
+  		}
+  		@include m800 {
+  			width: 100%;
+  			margin: 0 auto;
+  			padding: 20px 10px 30px;
+  		}
+  		@include m500 {
+  			.button {font-size: 14px;}
+  		}
 
 
 		.title {
@@ -92,6 +120,15 @@
 			color: $blue;
 			font-family: $ibr;
 			margin-bottom: 20px;
+			@include m800 {
+	  			font-size: 24px;
+	  		}
+	  		@include m600 {
+	  			font-size: 20px;
+	  		}
+	  		@include m500 {
+	  			font-size: 18px;
+	  		}
 		}
 	}
 }

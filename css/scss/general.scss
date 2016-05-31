@@ -42,6 +42,15 @@ h2 {
     border-bottom: 3px solid $yellow;
     padding: 2px 0;
     color: $blue;
+      @include m800 {
+            font: 26px $ibr;
+      }
+      @include m600 {
+            font: 24px $ibr;
+      }
+      @include m500 {
+            font: 22px $ibr;
+      }
 }
 .subtitle {
     font: 16px/28px $ms;
@@ -49,10 +58,30 @@ h2 {
     strong {
         font: 16px/28px $msb;
     }
+    @include m600 {
+        font: 14px/24px $ms;
+        margin-top: 30px;
+        strong {
+            font: 14px/24px $msb;
+        }
+    }
+    @include m360 {
+        font: 13px/22px $ms;
+        strong {
+            font: 13px/22px $msb;
+        }
+    }
 }
+
 h3 {
     font: 29px $ibr;
     color: #1F8EA4;
+    @include m600 {
+            font-size: 26px;
+      }
+      @include m500 {
+            fofont-size: 20px;
+      }
 }
 /*---------------------- 
     HEADER STYLES
@@ -87,10 +116,11 @@ header {
              background-color: $greyD;
              
              &.active {left: 0;}
-             &:after {display: none;}
+             &:after {display: none;
+        }
     }
     @media (max-width: 1000px) and (min-height: 600px) {
-        @include flex($alignI: center, $justify: space-around,  $direction: column);  
+        @include flex($alignI: center, $justify: center,  $direction: column-reverse);  
     }
             
      /*-------- header_info ---------*/       
@@ -157,7 +187,7 @@ header {
                     height: auto;
                 & img {
                     display: block;
-                    width: 100px;
+                    width: 200px;
                     margin: 10px auto;
                 }
                 em {
@@ -165,7 +195,10 @@ header {
                     text-align: center;
                     display: block;
                     width: 100%;
+                    margin-left: 0;
+                    font-size: 18px;
                 }
+                margin-bottom: 20px;
             }
             .contactUs {
                 color: #FFF;
@@ -181,6 +214,24 @@ header {
             }
 
         }
+        @include m600 {
+            .logo {
+                margin-bottom: 0;
+                img {
+                    width: 150px;
+                    margin-top: 0;
+                }
+                em {
+                    font-size: 14px;
+                }
+            }
+            .contactUs {
+                margin: 5px auto;
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
     }/*-------- end header__info ---------*/     
 
 
@@ -191,16 +242,26 @@ header {
         position: absolute;
         top: 100px;
         z-index: 10;
-        &.hasScrolled {
-            top: 0;
-            position: fixed;
+        @media (min-width: 1000px) {
+            &.hasScrolled {
+                top: 0;
+                position: fixed;
+            }
         }
         & ul {
             @include flex();
             list-style-type: none;
             margin: 0;
-            li:before {content: " | "; color: $colorGreyL; margin-right: 0; vertical-align: middle;}
-            li:last-of-type:after {content: " | "; color: $colorGreyL; margin-right: 0; vertical-align: middle;}
+            @media (min-width: 1000px) {
+                li:before,
+                li:last-of-type:after {content: " ";
+                margin-right: 6px;
+                vertical-align: middle;
+                width: 1px;
+                height: 30px;
+                background-color:  #393637;
+                display: inline-block;}   
+            }
             &  a {
                     font:  13px $ibr;
                     text-transform: uppercase;
@@ -222,6 +283,8 @@ header {
             width: 100%;
             overflow: scroll;
             position: relative;
+            position: static;
+            margin-top: 30px;
                 & ul { 
                     @include flexDirection(column);
                     width: 100% !important;
@@ -234,6 +297,12 @@ header {
                         &.active {color: #ECCC1D;}
                         &:hover  {background: transparent;}
                     } 
+        }
+        @include m600 {
+            height: auto;
+            li {
+                margin-bottom: 5px;
+            }
         }
     }/*-------- end nav ---------*/  
     &.hasScrolled nav {
@@ -317,6 +386,11 @@ header {
     background-size: cover;
     padding: 0;
     position: relative;
+    @include m1000 {
+       height: auto;
+       max-height: 1000px; 
+       padding: 20px 0 40px;
+    }
     .wrapper {
         height: 100%;
         &:before {
@@ -324,6 +398,13 @@ header {
             height: 100%;
             display: inline-block;
             vertical-align: middle;
+        }
+    }
+    .logo {
+        display: none;
+        @include m1000 {
+           display: block;
+           margin: 0 40px;
         }
     }
     ul {
@@ -334,12 +415,33 @@ header {
         padding: 0;
         margin: 0;
         list-style-type: none;
+        @include m1000 {
+           display: block;
+           margin: 20px auto;
+           width: 480px;
+        }
+        @include m600 {
+            width: 100%;
+            padding: 0 10px;
+        }
         li {
             font: 34px $ibr;
             color: #fff;
             padding-left: 35px;
             margin-bottom: 20px;
             position: relative;
+            @include m1000 {
+               font-size: 28px;
+               margin-bottom: 10px;
+            }
+            @include m600 {
+               font-size: 22px;
+               margin-bottom: 10px;
+            }
+            @include m320 {
+               font-size: 20px;
+               margin-bottom: 10px;
+            }
             &:before {
                 content: "";
                 display: block;
@@ -353,6 +455,10 @@ header {
     }
     form {
         margin-left: 50px;
+        @include m1000 {
+           display: block;
+           margin: 20px auto 0;
+        }
     }
 }
 
@@ -363,6 +469,9 @@ form {
     padding: 30px 25px;
     display: inline-block;
     vertical-align: middle;
+    @include m360 {
+        width: 300px;
+    }
     p {
         font: 24px/30px $ibr;
         color: $greyD;
@@ -475,7 +584,15 @@ margin: 0 auto;
             font: 16px/18px $ms;
             color: #FFF;
         }
+        @include m750 {
+            width: 33% !important;
+            text-align: center;
+        }
+        @include m500 {
+            width: 50% !important;
+        }
     }
+
 }
 
 .setUp {
@@ -488,30 +605,74 @@ margin: 0 auto;
         background-color: #f6f7f8;
         padding-bottom: 65px;
         border-bottom: 4px solid #fff;
+        .products {
+            margin-bottom: 0;
+        }
     }
 }
 
 
 .products {
-    @include flex($wrap: wrap, $alignI: start, $justify: center);
+    .row {
+        @include flex($wrap: wrap, $alignI: start, $justify: center);
+        &:last-of-type + hr {
+            display: none;
+        }   
+    }
     .prodBlock {
-        width: 25%;
+           &:nth-of-type(4n + 2) {
+               border-right: 1px solid #E8E8E8;
+               border-left: 1px solid #E8E8E8;
+           }
+           &:nth-of-type(4n + 3) {
+               border-right: 1px solid #E8E8E8;
+           }
+           &:last-of-type {border: none;}
+         width: 25%;
+         @include m1100 {
+             width: 33%;
+             border: none !important;
+             &:nth-of-type(4n + 2),
+             &:nth-of-type(4n + 3) { border: none !important;}
+         }
+         @include m600 {
+             width: 50%;
+         }
+         @include m500 {
+            margin-bottom: 20px;
+             width: 300px;
+             padding: 20px 10px;
+             -webkit-box-shadow: 0 0 4px rgba(0,0,0,.2);
+                     box-shadow: 0 0 4px rgba(0,0,0,.2);
+             -webkit-border-radius: 6px;
+                     border-radius: 6px;
+         }
     }
     &.five .prodBlock {
         width: 20%;
+        @include m1100 {
+             width: 33%;
+        }
+        @include m600 {
+             width: 50%;
+         }
+         @include m500 {
+            margin-bottom: 20px;
+             width: 300px;
+             padding: 20px 10px;
+             -webkit-box-shadow: 0 0 4px rgba(0,0,0,.2);
+                     box-shadow: 0 0 4px rgba(0,0,0,.2);
+             -webkit-border-radius: 6px;
+                     border-radius: 6px;
+         }
     }
+    @include m1100 {
+         @include flex($wrap: wrap, $alignI: start, $justify: space-around);
+     }
 }
 
 .prodBlock {
    padding: 0 6px;
-   &:nth-of-type(4n + 2) {
-       border-right: 1px solid #E8E8E8;
-       border-left: 1px solid #E8E8E8;
-   }
-   &:nth-of-type(4n + 3) {
-       border-right: 1px solid #E8E8E8;
-   }
-   &:last-of-type {border: none;}
    &__img {
        width: 100px;
        height: 100px;
@@ -572,18 +733,42 @@ hr {
         list-style-type: none;
         text-align: left;
         box-shadow: 0px 0px 27px 0px rgba( 31, 142, 164, .2 );
+        @include m750 {
+             -webkit-column-count: 1; /* Chrome, Safari, Opera */
+            -moz-column-count: 1; /* Firefox */
+            column-count: 1;
+            -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+            -moz-column-gap: 0px; /* Firefox */
+            column-gap: 0px;
+        }
+        @include m500 {
+            padding: 25px 20px;
+        }
+        @include m360 {
+            padding: 20px 15px;
+        }
         li {
             font: 16px/24px $ms;
             border-bottom: 1px solid #E8E8E8;
             width: 100%;
             padding: 8px 0 2px;
+            padding-right: 95px;
+            position: relative;
+            @include m750 {
+                 &:last-of-type {border: none;}
+            }
+            @include m500 {
+                font: 15px/22px $ms;
+            }
             span {
                 display: inline-block;
                 vertical-align: bottom;
                 &.price {
                     color: #177B8F;
                     font-family: $msb;
-                    float: right;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0;
                 }
             }
         }

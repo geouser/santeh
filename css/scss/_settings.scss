@@ -25,7 +25,7 @@ $phones:		'max-width: 750px';
 // TYPOGRAPHIC
 // ---------------------------
 html, body                    	{   height: 100%;
-									color: $grey;
+									color: #484748;
 									font-family: $ms;
 									font-size: 16px; }
 
@@ -47,6 +47,10 @@ strong 							{	font-family: $msb;
 .wrapper                      	{   width: 960px;
 								   	margin: 0 auto;
                                    	text-align: center;
+                                   	@media (max-width: 1000px) {
+                                   		width: 100%;
+                                   		padding: 0 10px;
+                                   	}
                               	}
 header 							{}
 aside 							{}
