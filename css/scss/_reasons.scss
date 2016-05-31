@@ -28,6 +28,10 @@
 	&__box {
 		@include flex($wrap: wrap, $alignI: flex-start, $justify: space-between);
 
+		@media ($phones) {
+			display: block;
+		}
+
 		.item {
 			width: 49%;
 			height: 120px;
@@ -35,6 +39,10 @@
 			padding: 20px 20px 20px 0;
 			margin-bottom: 20px;
   			box-shadow: 0px 0px 27px 0px rgba( 31, 142, 164, .31);
+
+  			@media ($phones) {
+  				width: 100%;
+  			}
 
   			&__icon {
   				@extend %vertAlign;
@@ -59,6 +67,11 @@
   				padding-left: 25px;
   				font-size: 20px;
   				line-height: 28px;
+
+  				@media (max-width: 500px) {
+  					font-size: 16px;
+  					line-height: normal;
+  				}
   			}
 		}
 	}
@@ -78,6 +91,11 @@
 
 		.button {
 			margin: 0 5px;
+
+			@media ($phones) {
+				display: block;
+				margin: 10px auto;
+			}
 		}
 	}
 }

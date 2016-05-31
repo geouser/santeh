@@ -17,10 +17,15 @@
 
 		.slick-arrow {
 			top: 90px;
+
+			@media (max-width: 800px) {
+				top: 50%;
+			}
 		}
 
 		.slide {
 			height: auto;
+			max-height: 260px;
 			padding: 0 10px;
 			border-right: 0;
 			&:before {

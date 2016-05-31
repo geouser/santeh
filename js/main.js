@@ -122,14 +122,7 @@ $('.menu-button').on('click', function(event) {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 800,
+        breakpoint: 850,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1
@@ -167,35 +160,14 @@ $('.menu-button').on('click', function(event) {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 650,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 500,
+        breakpoint: 801,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1
         }
       },
       {
-        breakpoint: 400,
+        breakpoint: 450,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1

@@ -1,6 +1,12 @@
 .map {
 	padding: 75px 0;
 	position: relative;
+    overflow: hidden;
+
+    @media ($tablets) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
 
 	.wrapper {
@@ -17,6 +23,11 @@
   		position: relative;
   		z-index: 5;
   		color: #fff;
+
+        @media ($tablets) {
+            width: calc(100% + 20px);
+            margin-left: -10px;
+        }
 
   		.title {
   			font-family: $ibr;
@@ -121,5 +132,10 @@
 		left: 0;
 		right: 0;
 		background-color: #ccc;
+
+        @media ($tablets) {
+            position: static;
+            height: 300px;
+        }
 	}
 }

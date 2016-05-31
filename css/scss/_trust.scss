@@ -5,6 +5,10 @@
 		padding: 0 50px;
 		margin-top: 40px;
 
+		@media ($tablets) {
+			padding: 0 35px;
+		}
+
 		.slick-list {
 			border-left: 1px solid #E8E8E8;
 			border-right: 1px solid #E8E8E8;

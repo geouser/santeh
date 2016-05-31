@@ -1,5 +1,10 @@
 .scheme {
 	@extend .numbers;
+	@media ($phones) {
+		display: block;
+		background-image: unset;
+		background-color: $blue;
+	}
 
 	h2 {
 		color: #fff;
@@ -11,9 +16,35 @@
 		background-image: url(../images/curve.png);
 		background-position: 50% 0;
 		background-repeat: no-repeat;
+
+		@media ($tablets) {
+			background-image: unset;		
+		}
+
+		@media ($phones) {
+			display: ibline-block;
+		}
 		
 		.item {
 			width: 33.333%;
+
+			@media ($tablets) {
+				padding: 0 10px;
+
+				br {
+					display: none;
+				}
+			}
+
+			@media ($phones) {
+				width: 300px;
+				display: block;
+				margin: 0 auto 50px auto;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 			
 			.num {
 				width: 70px;
