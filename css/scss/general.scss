@@ -459,13 +459,16 @@ form {
 .setUp {
     .products {
         margin-top: 35px;
+        margin-bottom: 65px;
     }
 }
 .products {
     @include flex($wrap: wrap, $alignI: start, $justify: center);
-    
     .prodBlock {
         width: 25%;
+    }
+    &.five .prodBlock {
+        width: 20%;
     }
 }
 
@@ -478,6 +481,7 @@ form {
    &:nth-of-type(4n + 3) {
        border-right: 1px solid #E8E8E8;
    }
+   &:last-of-type {border: none;}
    &__img {
        width: 100px;
        height: 100px;

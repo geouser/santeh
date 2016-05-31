@@ -84,9 +84,16 @@ $('.menu-button').on('click', function(event) {
   });
 
 
-$('.prodBlock').each(function(){
+$('.products.four .prodBlock').each(function(){
     var $this = $(this);
     if ($this.is(':nth-of-type(4n + 4)')) {
+        $('<hr>').insertAfter($this);
+    }
+});
+
+$('.products.five .prodBlock').each(function(){
+    var $this = $(this);
+    if ($this.is(':nth-of-type(5n)')) {
         $('<hr>').insertAfter($this);
     }
 });
