@@ -515,13 +515,15 @@ form {
         height: 100%;
         width: 100%;
         border: none;
+        padding-right: 45px;
         background-color: #EFEFEF;
         font: 12px 'Verdana';
         padding-left: 20px;
         @include transition(all, .1s);
         -webkit-border-radius: 10px;
                 border-radius: 10px;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: #fff;
         }
     }
@@ -565,7 +567,9 @@ margin: 0 auto;
 
 
 .numbers {
-    background: url('../images/numbersBg.jpg') no-repeat center center;
+    background-image: url('../images/numbersBg.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-size: cover;
     h2 {
         margin-bottom: 40px;
@@ -786,7 +790,8 @@ hr {
 
 
 /*-------------------------------------*/
-
+@import 'reasons';
+@import 'scheme';
 @import 'abonents';
 @import 'trust';
 @import 'map';
