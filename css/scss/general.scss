@@ -723,6 +723,10 @@ hr {
     h2 {
         width: 103%;
         margin-left: -1%;
+        @include m1000 {
+            margin-left: 0;
+            width: 100%;
+        }
     }
     .emergencyPrice {
         margin-top: 30px;
