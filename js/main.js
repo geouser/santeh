@@ -83,6 +83,33 @@ $('.menu-button').on('click', function(event) {
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  $('.magnific-video').magnificPopup({
+    type: 'iframe',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+    modal: false,
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom',
+
+    iframe: {
+      patterns: {
+        youtube: {
+          src: 'http://www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+        }
+      }
+    }
+    
+  });
+
+
   $('.trust__slider').slick({
     dots: false,
     arrows: true,
@@ -101,6 +128,51 @@ $('.menu-button').on('click', function(event) {
         breakpoint: 800,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $('.videos__slider').slick({
+    dots: false,
+    arrows: true,
+    lazyLoad: 'ondemand',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 950,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1
         }
       },
