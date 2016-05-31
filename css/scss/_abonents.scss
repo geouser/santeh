@@ -4,6 +4,50 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	position: relative;
-	padding-left: 380px;
 	
+	.wrapper {
+		padding-left: 380px;
+	}
+
+	h2 {
+		margin-bottom: 40px;
+
+		&+small {
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			line-height: 28px;
+			margin-bottom: 30px;
+		}
+	}
+
+
+	&__works {
+		width: calc(100% + 190px);
+		margin-left: -190px;
+		background-color: rgba(255, 255, 255, .9);
+		padding: 30px 0 25px 170px;
+		text-align: center;
+
+		h3 {
+			font-size: 18px;
+			margin-bottom: 30px;
+			line-height: 28px;
+		}
+
+		ul {
+			margin: 0;
+			text-align: left;
+			display: inline-block;
+			padding-bottom: 16px;
+
+			&+small {
+				display: block;
+			}
+
+			li {
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
