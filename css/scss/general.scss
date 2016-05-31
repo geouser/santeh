@@ -406,13 +406,15 @@ form {
         height: 100%;
         width: 100%;
         border: none;
+        padding-right: 45px;
         background-color: #EFEFEF;
         font: 12px 'Verdana';
         padding-left: 20px;
         @include transition(all, .1s);
         -webkit-border-radius: 10px;
                 border-radius: 10px;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: #fff;
         }
     }
