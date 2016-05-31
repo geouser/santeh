@@ -128,7 +128,11 @@ $('.menu-button').on('click', function(event) {
     ]
   });
 
-
-
+  $('.prodBlock').each(function(){
+      var $this = $(this);
+      if ($this.is(':nth-of-type(4n + 4)')) {
+          $('<hr>').insertAfter($this);
+      }
+  });
 
 });// end of file
