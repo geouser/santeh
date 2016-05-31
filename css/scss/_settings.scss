@@ -1,0 +1,49 @@
+// COLORS
+// ---------------------------
+$blue:			#1f8ea4;
+$grey:			#58595b;
+$yellow:		#fece0a;
+
+
+// FONTS
+// ---------------------------
+$ibr:			'intro_boldregular';
+
+$ms:			'museo_sans_cyrl300';
+$msb:			'museo_sans_cyrl700';
+
+
+// RESPONSIVE
+// ---------------------------
+$tablets:		'max-width: 1000px';
+$phones:		'max-width: 750px';
+
+
+// TYPOGRAPHIC
+// ---------------------------
+html, body                    	{   height: 100%;
+									color: $grey;
+									font-family: $ms;
+									font-size: 16px; }
+
+h1, h2, h3, h4, h5              {   font-family: $msb;
+									font-weight: normal; }
+
+h2 								{ 	font-size: 30px;
+									text-transform: uppercase; }
+
+strong 							{	font-weight: normal;
+									font-weight: normal; }
+
+
+// lAYOUT
+// ---------------------------
+
+.wrapper                      	{   width: 960px;
+								   	margin: 0 auto;
+                                   	text-align: center;
+                              	}
+header 							{}
+aside 							{}
+main 							{}
+footer 							{}
