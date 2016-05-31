@@ -1,0 +1,46 @@
+.scheme {
+	@extend .numbers;
+
+	h2 {
+		color: #fff;
+		margin-bottom: 50px;
+	}
+
+	&__box {
+		@include flex($wrap: wrap, $alignI: flex-start);
+		background-image: url(../images/curve.png);
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		
+		.item {
+			width: 33.333%;
+			
+			.num {
+				width: 70px;
+				height: 70px;
+				background-image: url(../images/circle.png);
+				background-size: 100%;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				line-height: 70px;
+				font-size: 26px;
+				font-family: $ibr;
+				color: $yellow;
+				margin: 0 auto 13px;
+			}
+
+			.title {
+				font-size: 24px;
+				font-family: $ibr;
+				color: $yellow;
+				margin-bottom: 4px;
+			}
+
+			.text {
+				color: #fff;
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+	}
+}
