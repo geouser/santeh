@@ -2,9 +2,12 @@
 // ---------------------------
 $blue:			#1f8ea4;
 $grey:			#58595b;
+$greyD:         #231F20;
 $yellow:		#fece0a;
 
 
+
+$colorGreyL: #808182;
 // FONTS
 // ---------------------------
 $ibr:			'intro_boldregular';
@@ -35,7 +38,9 @@ h2 								{ 	font-size: 30px;
 strong 							{	font-weight: normal;
 									font-weight: normal; }
 
-
+.white {
+	color: #FFF;
+}
 // lAYOUT
 // ---------------------------
 

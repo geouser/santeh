@@ -33,121 +33,218 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 */
 
 
+h2 {
+    font: 30px $ibr;
+    text-transform: uppercase;
+    display: inline-block;
+    border-top: 3px solid $yellow;
+    border-bottom: 3px solid $yellow;
+    padding: 2px 0;
+    color: $blue;
+}
+.subtitle {
+    font: 16px/28px $ms;
+    margin-top: 50px;
+}
+
 /*---------------------- 
     HEADER STYLES
 ------------------------*/
+body {position: relative;}
+section:not(.offer) {padding: 65px 0;}
 header {
-    margin: 0;
-    left:0;
-    @include position(absolute, 0, auto, auto, 0);
-    width: 100%;
-    z-index: 100;
-    background: #fff;
-    @include transition(all, .4s);
-
-    @include m800 {
-         @include position(fixed, 0, auto, auto, -100%);
-         width: 260px !important;
+            margin: 0;
+            left:0;
+            @include position(absolute, 0, auto, auto, 0);
+            width: 100%;
+            z-index: 100;
+            height: 100px;
+            background-color: #FFF;
+            @include transition(all, .4s);
+        
+    @include m1000 {
+             @include position(fixed, 0, auto, auto, -100%);
+             width: 260px !important;
+             height: 100%;
+             overflow: scroll;
+             text-align: center;
+             margin-top: 0;
+             padding: 20px 0;
+             z-index: 100;
+             background-color: $greyD;
+             
+             &.active {left: 0;}
+             &:after {display: none;}
+    }
+    @media (max-width: 1000px) and (min-height: 600px) {
+        @include flex($alignI: center, $justify: space-around,  $direction: column);  
+    }
+            
+     /*-------- header_info ---------*/       
+    .header__info {
+         background: url('../images/header_info_bg.jpg') repeat center center;
          height: 100%;
-         text-align: center;
-         background-color: #fff;
-         margin-top: 0;
-         padding: 20px 0;
-         z-index: 100;
-         
-         &.active {left: 0;}
-         
-         .wrapper {
-               @include flexDirection(column);
-               width: 100%;
-        }
-    }
-
-
-    .header__top {
-        padding: 7px 0;
-        color: #FFF;
         .wrapper {
-            @include flex();
+             @include flex();   
+             height: 100%;
         }
-        .divide {
-            height: 35px;
-            width: 1px;
-            vertical-align: middle;
-            background-color: #1E5D75;
+         
+        .logo {
+                position: relative;
+                height: 100px;
+                display: block;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            em {
+                    font: 12px/18px $ms;
+                    margin-left: 13px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: left;
+                }
+            img {
+                    display: inline-block;
+                    vertical-align: middle;
+            }
         }
-    }
-     .header__bottom {
-        padding: 30px 0;
-        background-color: #fff;
-        .wrapper {
-            @include flex();
-        }
-    }
-}
 
-.tel,
-.mail,
-.timeOfWork {
-    color: #FFF;
-}
-
-.logo {
-    position: relative;
-    display: block;
-  & img {
-     height: 100%;
-     display: inline-block;
-     vertical-align: middle;   
-    }
-    & p {
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 18px;
-        text-transform: uppercase;
-        text-align: left;
-        padding-top: 6px;
-        span{
-         display: inline-block;
+        .contactUs {
+            color: #484748;
+            text-align: left;
+            a {
+                display: block;
+                text-align: left;
+                font: 20px $ibr;
+                color: #484748;
+            } 
+            .tel {
+            }
+            .mail {
+            }
+            span  {
+                font: 12px $ms;
+            }  
+            &__tel span {
+                color: $blue;
+            }
         }
-        strong {
-            color: #000;
-            text-transform: none;
+        @include m1000 { 
+            background: transparent;
+            height: auto;
+            .wrapper {
+                width: 100%;
+                display: block;
+            }
+            .logo {
+                    width: 100%;
+                    height: auto;
+                & img {
+                    display: block;
+                    width: 100px;
+                    margin: 10px auto;
+                }
+                em {
+                    color: #FFF;
+                    text-align: center;
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .contactUs {
+                color: #FFF;
+                text-align: center;
+                margin: 20px 0;
+                a {
+                    text-align: center !important;
+                    color: #FFF;
+                }
+                span {
+                    color: #FFF;
+                }
+            }
+
+        }
+    }/*-------- end header__info ---------*/     
+
+
+    /*-------- nav ---------*/
+    nav {
+        width: 100%;
+        background-color: $greyD;
+        position: absolute;
+        top: 100px;
+        z-index: 10;
+        &.hasScrolled {
+            top: 0;
+            position: fixed;
+        }
+        & ul {
+            @include flex();
+            list-style-type: none;
+            margin: 0;
+            li:before {content: " | "; color: $colorGreyL; margin-right: 0; vertical-align: middle;}
+            li:last-of-type:after {content: " | "; color: $colorGreyL; margin-right: 0; vertical-align: middle;}
+            &  a {
+                    font:  13px $ibr;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    display: inline-block;
+                    padding: 22px 14px 15px;
+                    text-decoration: none;
+                    border-bottom: 4px solid transparent;
+                    @include transition(all, .1s);
+                &:hover {border-bottom: 4px solid $yellow;}
+                &.active {border-bottom: 4px solid $yellow;}
+            }
+
+        }
+
+        @include m1000 { 
             display: block;
-            margin-top: 5px;
-            padding-left: 2px;
+            height: 300px;
+            width: 100%;
+            overflow: scroll;
+            position: relative;
+                & ul { 
+                    @include flexDirection(column);
+                    width: 100% !important;
+                    height: 100%;
+                }
+                li:before {display: none;}
+                    &  li a  {   
+                        margin: 0 0 5px 0;
+                        padding: 0 0 4px 0;
+                        &.active {color: #ECCC1D;}
+                        &:hover  {background: transparent;}
+                    } 
         }
+    }/*-------- end nav ---------*/  
+    &.hasScrolled nav {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        @include m1000 { 
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+        }
+    }  
+       
+}/*-------- end header ---------*/       
+
+.logo--mobile {
+    @include position(absolute, 20px, 0, auto, 0);
+    display: none;
+    margin: auto;
+    z-index: 3;
+    @include m1000 {
+        display: block; 
     }
 }
 
 
-/*-------- nav ---------*/
-nav ul {
-        @include flex();
-        list-style-type: none;
-        &  a {
-            display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);
-                
-            &:hover {}
-        }
-
-
-      @include m800 { 
-          display: block;
-          height: 100%;
-          overflow: scroll;
-          position: relative;
-          
-          li a                    {   
-                margin: 0 0 25px 0;
-                &.active {color: #ECCC1D;}
-                &:hover  {background: transparent;}
-          } 
-      }
-}
 
 
 
@@ -160,7 +257,7 @@ nav ul {
                                     margin: auto; 
                                     cursor: pointer;
                                     z-index: 100;
-                                    background-color: salmon;
+                                    background-color: #2C2D2E;
                                     border: none;
                                     -webkit-border-radius: 4px;
                                             border-radius: 4px;
@@ -184,8 +281,11 @@ nav ul {
       &.active .bottom_line         {   @include transform(rotate(-45deg)); bottom: 45%;}
       &.active .middle_line         {   width: 0; left: 50%;}
 
-      @include m800 {
+      @include m1000 {
             display: block;
+      }
+      @include m320 {
+            right: 5px;
       }
 
 }
@@ -200,22 +300,112 @@ nav ul {
     height: 100%;
     min-height: 650px;
     max-height: 900px;
-    background: url('../images/law.jpg') no-repeat center center;
+    background: url('../images/offerBg.jpg') no-repeat center center;
     background-size: cover;
-    padding: 200px 0 0 0;
+    padding: 157px 0 0 0;
     position: relative;
-
-
-    .offerInfo {
+    .wrapper {
         height: 100%;
-        @include flex($alignI: center, $justify: space-around, $direction: column);
-        z-index: 2;
-        position: relative;
-        text-align: center;
+        &:before {
+            content: "";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
-
+    ul {
+        text-align: left;
+        display: inline-block;
+        vertical-align: middle;
+        width: 580px;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+            font: 34px $ibr;
+            color: #fff;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-image: url("../images/check.png");
+                background-size: 100% 100%;
+                @include position(absolute, 10px, auto, auto , 0px);
+            }
+        }
+    }
+    form {
+        margin-left: 50px;
+    }
 }
 
+
+form {
+    width: 320px;
+    background-color: #FFF;
+    padding: 30px 25px;
+    display: inline-block;
+    vertical-align: middle;
+    p {
+        font: 24px/30px $ibr;
+        color: $greyD;
+        margin-bottom: 20px;
+        display: block;
+        text-transform: uppercase;
+        small {
+            display: block;
+            font: 14px $ms;
+            text-transform: none;
+            margin-top: 10px;
+        }
+    }
+    span {
+        display: block;
+        height: 50px;
+        background-color: #EFEFEF;
+        margin-bottom: 15px;
+        width: 100%;
+        position: relative;
+        border: 1px solid #EFEFEF;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        &:after {
+            width: 12px;
+            height: 16px;
+            content: "";
+            display: block;
+            @include position(absolute, 0, 20px, 0, auto);
+            margin: auto;
+            background-image: url("../images/inputPerson.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        &.tel:after {
+             background-image: url("../images/inputTel.png");
+        }
+    }
+    input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        background-color: #EFEFEF;
+        @include transition(all, .1s);
+        -webkit-border-radius: 10px;
+                border-radius: 10px;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+    button {
+        background-color: $yellow;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
 
 /*---------------------- 
     INFOBLOCKS STYLES
@@ -227,7 +417,6 @@ nav ul {
                   margin-bottom: 20px;
                   padding: 0 20px;
                   text-align: center;
-                  border: 1px solid peru;
             &_icon {
                         width: 150px;
                         height: 150px;
@@ -236,12 +425,35 @@ nav ul {
             }
         }
 
-    &.--two  .infoBlock   {    width: 50%;}
-    &.--four .infoBlock   {    width: 25%;}
-    &.--three .infoBlock  {    width: 33%;}
+    &.two  .infoBlock   {    width: 50%;}
+    &.three  .infoBlock   {    width: 33%;}
+    &.four .infoBlock   {    width: 25%;}
+    &.five .infoBlock  {    width: 20%;}
 }
 
 
+.numbers {
+    background: url('../images/numbersBg.jpg') no-repeat center center;
+    background-size: cover;
+    h2 {
+        margin-bottom: 40px;
+    }
+    .infoBlock {
+        text-align: left;
+        margin-top: 25px;
+        padding: 0 2px 0 4px;
+        span {
+            display: block;
+            font: 30px $ibr;
+            color: $yellow;
+            margin-bottom: 5px;
+        }
+        p {
+            font: 16px/18px $ms;
+            color: #FFF;
+        }
+    }
+}
 
 
 
