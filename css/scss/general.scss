@@ -5,6 +5,7 @@
 @import 'fonts';
 @import 'settings';
 @import 'mixins';
+@import 'buttons';
 
 
 
@@ -457,5 +458,6 @@ form {
 
 
 
-
-
+/*-------------------------------------*/
+@import 'map';
+@import 'footer';

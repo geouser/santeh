@@ -1,0 +1,48 @@
+.button {
+	display: inline-block;
+	vertical-align: middle;
+	height: 48px;
+  	border-radius: 10px;
+  	text-transform: uppercase;
+  	font-family: $ibr;
+  	font-size: 16px;
+  	color: #231f20;
+  	border: 0;
+  	background-color: $yellow;
+  	text-align: center;
+  	width: auto;
+  	padding: 0 25px;
+  	@include transition(all, 0.3s);
+
+  	&:hover {
+  		background-color: #FEB500;
+  	}
+
+  	&--full {
+  		width: 100%;
+  	}
+
+  	&--blue {
+  		background-color: $blue;
+  		color: #fff;
+
+  		&:hover {
+  			background-color: #1C8094;
+  		}
+  	}
+
+  	&--small {
+  		height: 40px;
+  		font-size: 14px;
+  		padding: 0 15px;
+  	}
+}
+
+a.button {
+	line-height: 48px;
+
+	&--small {
+		font-size: 14px;
+		line-height: 40px;
+	}
+}
