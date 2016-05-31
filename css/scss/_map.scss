@@ -80,7 +80,36 @@
   					font-family: $msb;
   					color: $yellow;
   					text-decoration: underline;
+
+            &:before {
+              content: '';
+              width: 12px;
+              height: 10px;
+              background-image: url(../images/mail.png);
+              background-size: 100%;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              margin-top: -5px;
+            }
   				}
+          &.phone {
+            &:before {
+              content: '';
+              width: 10px;
+              height: 12px;
+              background-image: url(../images/phone.png);
+              background-size: 100%;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              margin-top: -6px;
+            }
+          }
   			}
   		}
 	}
@@ -92,39 +121,5 @@
 		left: 0;
 		right: 0;
 		background-color: #ccc;
-	}
-}
-
-a {
-	&.phone {
-		&:before {
-			content: '';
-			width: 10px;
-			height: 12px;
-			background-image: url(../images/phone.png);
-			background-size: 100%;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			position: absolute;
-			left: 0;
-			top: 50%;
-			margin-top: -6px;
-		}
-	}
-
-	&.mail {
-		&:before {
-			content: '';
-			width: 12px;
-			height: 10px;
-			background-image: url(../images/mail.png);
-			background-size: 100%;
-			background-position: 50% 50%;
-			background-repeat: no-repeat;
-			position: absolute;
-			left: 0;
-			top: 50%;
-			margin-top: -5px;
-		}
 	}
 }
