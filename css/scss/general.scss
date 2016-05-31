@@ -52,7 +52,7 @@ h2 {
     HEADER STYLES
 ------------------------*/
 body {position: relative;}
-section:not(.offer) {padding: 65px 0;}
+section {padding: 65px 0;}
 header {
             margin: 0;
             left:0;
@@ -456,7 +456,60 @@ form {
     }
 }
 
+.setUp {
+    .products {
+        margin-top: 35px;
+    }
+}
+.products {
+    @include flex($wrap: wrap, $alignI: start, $justify: center);
+    
+    .prodBlock {
+        width: 25%;
+    }
+}
 
+.prodBlock {
+   padding: 0 10px;
+   &:nth-of-type(4n + 2) {
+       border-right: 1px solid #E8E8E8;
+       border-left: 1px solid #E8E8E8;
+   }
+   &:nth-of-type(4n + 3) {
+       border-right: 1px solid #E8E8E8;
+   }
+   &__img {
+       width: 100px;
+       height: 100px;
+       background-color: $grey;
+       margin: 0 auto 20px;
+       -webkit-border-radius: 50%;
+               border-radius: 50%;
+   }
+   h3 {
+       font: 22px $ibr;
+       color: $blue;
+   }
+   ul {
+       list-style-type: none;
+       text-align: center;
+       li {
+            font: 14px/22px $ms;
+            margin-bottom: 8px;
+           strong {
+               color: $blue;
+           }
+       }
+   }
+}
+
+hr {
+   display: block;
+   width: 100%;
+   margin: 20px 0;
+   border: none;
+   border-top: 1px solid #E8E8E8;
+}
 
 /*-------------------------------------*/
 @import 'map';
